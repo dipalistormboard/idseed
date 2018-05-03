@@ -1,0 +1,331 @@
+body {
+    margin: 0 auto;
+    padding: 0px;
+    width: 1090px;
+    position: relative;
+}
+
+
+a:link, a:visited, a:hover {
+    color: #4c173d;
+    text-decoration: none;
+}
+
+a:hover {
+	color: #603913;
+}
+
+h1 {
+    color: #4c173d;
+    font-size: 30px;
+    font-style: italic;
+    border-bottom: 2px solid #634608;
+}
+
+h2 {
+    color: #4c173d;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+img {
+	border: none;
+}
+
+td{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#header {
+    height: 180px;
+    width: 100%;
+    background-image: url(fs_images/header_background.png);
+    background-repeat: repeat-x;
+    position: relative;
+    z-index: 0;
+	display:none;
+}
+
+#header .cfia-logo {
+    position: absolute;
+    left: 50px;
+    top: 36px;
+}
+
+#header .canada-logo {
+    position: absolute;
+    left: 570px;
+    top: 6px;
+}
+
+#header .language-selector {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+
+#header .search {
+	position: absolute;
+	left: 450px;
+	top: 10px;
+}
+
+#search-text {
+	background-color: #d3e1b8;
+	border: none;
+	color: #4c173d;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#header .language-selector a:link, #header .language-selector a:visited {
+	color: #ffffff;
+}
+
+#header .language-selector ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#header .language-selector li {
+    float: left;
+    list-style-type: none;
+    padding-right: 28px;
+    font-weight: bold;
+}
+
+#header .header-image {
+	position: absolute;
+	left: 710px;
+	top: 0px;
+}
+
+#header .title {
+	position: absolute;
+	left: 50px;
+	top: 70px;
+	color: #4c173d;
+	font-size: 160%;
+	font-weight: bold;
+}
+
+#header .menu {
+    height: 65px;
+    width: 600px;
+    position: absolute;
+    left: 50px;
+    top: 103px;
+    background-color: #7d910f;
+    background-image: url(fs_images/nav_gradient.png);
+    background-repeat: repeat-x;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: -2px -2px 6px #b5c19e;
+    -moz-box-shadow: -2px -2px 6px #b5c19e;
+    -webkit-box-shadow: -2px -2px 6px #b5c19e;
+    behavior: url(fs_images/PIE.htc);
+    
+}
+
+#header .menu ul {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 18px;
+    top: 6px;
+}
+
+#header .menu li {
+    float: left;
+    position: relative;
+    list-style-type: none;
+    background-image: url(fs_images/header_bullet.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 10px;
+    margin-top: 18px;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+#header .menu li:first-child {
+    background-image: none;
+}
+
+#header .menu a:link, #header .menu a:visited {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#header .menu a:hover {
+	color: #4c173d;
+}
+
+#image-bar {
+	float: left;
+	position: relative;
+	z-index: 1;
+	width: 146px;
+	padding-left: 50px;
+	padding-right: 15px;
+	font-size: 10px;
+	background-color: #ffffff;
+}
+
+#image-bar .thumbnail-group {
+	margin-bottom: 15px;
+}
+
+#image-bar .thumbnail {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	background-color: #b5b5b5;
+	vertical-align: middle;
+}
+
+#image-bar .caption {
+	margin-top: 4px;
+}
+
+#content {
+    position: relative;
+    max-width: 975px;
+    margin-left: 231px;
+    color: #555555;
+}
+
+p strong {
+	color: #4c173d;
+}
+
+.no-image-bar #content {
+    margin-left: 75px;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: -10;
+    height: 100px;
+    margin-top: 20px;
+	background-image: url(fs_images/footer_background.png);
+	background-repeat: repeat-x;
+    color: #ffffff;
+	font-size: 77%;
+	display:none;
+}
+
+#footer .medallion {
+	height: 54px;
+    width: 438px;
+    position: absolute;
+    left: 615px;
+    top: 12px;
+    z-index: 30;
+    background-color: #7d910f;
+    background-image: url(fs_images/nav_gradient.png);
+    background-repeat: repeat-x;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: -2px -2px 6px #b5c19e;
+    -moz-box-shadow: -2px -2px 6px #b5c19e;
+    -webkit-box-shadow: -2px -2px 6px #b5c19e;
+    behavior: url(fs_images/PIE.htc);
+}
+
+#footer .medallion .logo {
+	position: absolute;
+	top: 12px;
+	left: 5px;
+}
+
+#footer .medallion .rights {
+	position: absolute;
+	top: 16px;
+	left: 125px;
+}
+
+
+/* alphabet list on the index and glossary pages */
+#alphabet {
+	clear: both;
+	height: 2.5em;
+	text-align: center;
+}
+
+#alphabet ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#alphabet li {
+	list-style-type: none;
+	float: left;
+	padding: 0.5em;
+	margin: 0px;
+}
+
+#alphabet li:first-child {
+    padding-left: 0px;
+}
+
+/* related species box */
+#related-species {
+	height: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #d3e1b8;
+}
+
+#related-species h2 {
+	color: #809410;
+	font-size: 24px;
+}
+
+#related-species p {
+	color: #4c173d;
+}
+
+#related-species ul {
+	color: #4c173d;
+}
+
+#related-species table {
+	color: #252525;
+	background-color: #ffffff;
+}
+
+#related-species caption {
+	color: #4c173d;
+	text-align: left;
+	
+}
+
+#related-species .images {
+	float: right;
+	width: 150px;
+	margin-left: 50px;
+	margin-bottom: 25px;
+	clear: right;
+}
+
+#related-species .caption {
+	font-size: 9px;
+	padding-bottom: 5px;
+}
+
+.column {
+    padding-right: 10px;
+}
+
+.clear {
+    clear: both;
+}

@@ -1,0 +1,76 @@
+.pagination{
+	margin:40px 0 0 !important;
+	padding:0;
+	overflow:hidden;
+	/*text-align:center;*/
+	background:url(../images/pag_line.png) repeat-x 0 center !important;
+	display:inline-block;
+}
+.pagination a{
+	display:inline-block;
+	margin:6px 16px 6px 0;
+	font-size:20px;
+	color:#007541;
+	vertical-align:top;
+	width:25px;
+	line-height:23px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	color: #FFF;
+	border:1px solid #007541;
+	background-color:#007541;
+	font-size:16px;
+	text-align:center;
+}
+.pagination span{
+	color:#007541;
+	display:inline-block;
+	vertical-align:top;
+	background-color:#FFF;
+	line-height:23px;
+	width:38px;
+	margin:6px 0 6px -16px;
+	text-align:center;
+}
+.pagination a:hover{
+	background-color:#FFF;
+	color: #007541;
+}
+.pagination a.jp-current{
+	width:36px;
+	line-height:35px;
+	background-color:#FFF;
+	margin:1px 16px 1px 0;
+	color: #007541;
+}
+.pagination a.jp-previous{
+	width:33px;
+	height:32px;
+	border:none;
+	margin:3px 16px 3px 0;
+	text-indent:-2000000px;
+	background:url(../images/pag_prev.png) no-repeat 0 0;
+}
+.pagination a.jp-previous:hover{
+	background:url(../images/pag_prev_h.png) no-repeat 0 0;
+}
+.pagination a.jp-next{
+	width:33px;
+	height:32px;
+	border:none;
+	margin:3px 0;
+	text-indent:-2000000px;
+	background:url(../images/pag_next.png) no-repeat 0 0;
+}
+.pagination a.jp-next:hover{
+	background:url(../images/pag_next_h.png) no-repeat 0 0;
+}
+.pagination a.jp-first, .pagination a.jp-last{
+	display:none;
+}
+.pagination-div{
+	text-align:center;
+}

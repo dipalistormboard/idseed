@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	
+	<!-- this tells FSF that our output is HTML (vs XML) -->
+	<xsl:output method="html" />
+	
+	<!-- begin main template.  Processes the list of all fact sheets -->
+	<xsl:template match="/">
+	<!--<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></xsl:text>-->
+	<html>
+		<head>
+			<title>Seed Identification Guide</title>
+			<!--font section start-->
+            <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300|Roboto:400,300Italic,300,500,700' rel='stylesheet' type='text/css'>
+            <!--font section end-->
+
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+			
+			<script type="text/javascript" src="fs_images/autocolumn.min.js"></script><script type="text/javascript" src="scripts.js"></script>
+			<script type="text/javascript" src="fs_images/PIE.js"></script>
+
+			<!-- CSS reset sheet to normalize browser behavior -->
+			<!-- Note that FSF refuses to publish a second -->
+			<!-- stylesheet, so we tuck it into the images directory -->
+			<link rel="stylesheet" href="fs_images/reset.css" type="text/css" />
+			
+            <link rel="stylesheet" type="text/css" href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/css/style.css" />
+			<!-- stylesheets for our theme styles -->
+			<link rel="stylesheet" href="template.css" type="text/css"/>
+			
+			<!-- print-specific stylesheet -->
+			<link rel="stylesheet" href="fs_images/printable.css" type="text/css" media="print" />
+	</head>
+	<body class="">
+	
+		<div class="header">
+    	<div class="wrapper">
+              
+        	<a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/"><img class="logo" title="Seed Identification Guide" alt="Seed Identification Guide" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/settings/logo.png"></a>
+            <div class="top-right"> 
+                <div class="navigation-section">
+                <ul class="nav">
+<li class="home"><a  href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/">Home</a></li><li class="about"><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/pages/about.html">About</a></li>
+<li class="fact" ><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/fact">Fact sheets</a></li>
+<li class="keys"><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/pages/keys.html">Keys</a></li>
+<li class="glossary"><a class="active" href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/fact/glossary.html">Glossary</a></li>
+<li class="gallery"><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/gallery.html">Gallery</a></li><li class="contact"><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/pages/contact.html">Contact</a></li>
+</ul>
+                <ul class="languadge">
+                    	<!--<li><a href="#" class="eng">English</a></li>-->
+                        <li><a class="french" href="#">French</a>
+                        </li>
+                        
+                    </ul>
+            </div>
+               <div class="clear"></div>
+                
+                	
+                    <div class="search-section">
+                                    <ul class="top-logos">
+                                        <li><a href="https://www.google.com" target="_blank"><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo7.png"></a></li>
+                    
+                                        <li><a href="https://yahoo.com" target="_blank"><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo6.png"></a></li>
+                    
+                                        <li><a href="https://www.google.com" target="_blank"><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo5.png"></a></li>
+                    
+                                        <li><a href="javascript:void(0)" target=""><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo3.png"></a></li>
+                    
+                                    </ul>
+                                	<input type="submit" class="search-icon">
+                    <div class="top-search-outer">
+                    <div class="top-search">
+                        <form method="post">
+                            <input type="text" name="search" id="search" value="Search Fact Sheets">
+                        </form>
+                    </div>
+                    </div>
+                    <div class="clear"></div>
+            	</div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+		
+		<!-- start body content -->
+		<div  class="content">
+			<!-- main page title -->
+            
+			<div class="wrapper">
+        	<h2>Glossary</h2>
+        </div>
+		
+			<!-- alphabetical list of anchors -->
+			<div class="fact-alphabets glossary-alphabets">
+        	<div class="wrapper">
+				<ul>
+				<xsl:for-each select="Entity/Group">
+					<xsl:choose>
+						<xsl:when test="Item">
+							<li>
+								<a class="alphabet"><xsl:attribute name="href"> <xsl:text/>#<xsl:value-of select="Letter"/></xsl:attribute>
+								<xsl:value-of select="Letter"/></a>
+							</li>
+						</xsl:when>
+						<xsl:otherwise>
+							<li class="disabled">
+								<xsl:value-of select="Letter"/>
+							</li>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+				</ul>
+			</div>
+            </div>
+			<!-- end alphabet list -->
+			<div class="wrapper">
+            <span class="back-to-top" style="display: none;"></span>
+			<!-- begin body content -->
+			<xsl:for-each select="Entity">
+				<xsl:for-each select="Group">
+					<xsl:if test="Item">
+						<a>
+							<xsl:attribute name="name">
+							<xsl:text/>
+							<xsl:value-of select="Letter"/>
+							</xsl:attribute>
+						</a>
+						<h2><xsl:value-of select="Letter"/></h2>
+						<xsl:for-each select="Item">
+							<p class="title">
+								<xsl:value-of select="Item_Title" disable-output-escaping="yes"/>
+								:
+							</p>
+							<xsl:value-of select="Item_Link" disable-output-escaping="yes"/>                
+						</xsl:for-each>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:for-each>
+            </div>
+            
+		</div>
+		<!-- end body content -->
+		
+		<!-- begin footer -->
+		<div class="footer">
+    	<div class="ftnav">
+        	<div class="wrapper">
+
+                <ul>
+<li><a  href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/">Home</a></li><li><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/pages/about.html">About</a></li>
+<li><a  href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/fact/">Fact sheets</a></li>
+<li><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/pages/keys.html">Keys</a></li>
+<li><a class="active" href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/fact/glossary.html">Glossary</a></li>
+<li><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/gallery.html">Gallery</a></li><li><a href="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/pages/contact.html">Contact</a></li>
+</ul>
+            </div>
+        </div>
+        <div class="ftlogo-section">
+        	<div class="wrapper">
+                <div class="ftleft">
+            		<p>Edition 2.2 | Last updated April 2015</p>
+                </div>
+                                <ul class="ftlogos">
+                                        <li><a href="https://www.google.com" target="_blank"><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo7.png"></a></li>
+                    
+                                        <li><a href="https://yahoo.com" target="_blank"><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo6.png"></a></li>
+                    
+                                        <li><a href="https://www.google.com" target="_blank"><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo5.png"></a></li>
+                    
+                                        <li><a href="javascript:void(0)" target=""><img title="" alt="" src="http://www.idseed-test.ca.php56-33.ord1-1.websitetestlink.com/public/uploads/footer_logo_photo/ftlogo3.png"></a></li>
+                    
+                                    </ul>
+                            </div>
+        </div>
+    </div>
+    
+    <div class="copyright">
+    	<div class="wrapper">
+        	<ul class="ftsocial">
+            	<li><a class="fb" target="_blank" href="#"></a></li>
+                <li><a class="twit" target="_blank" href="#"></a></li>
+                <li><a class="in" target="_blank" href="#"></a></li>
+                <li><a class="google" target="_blank" href="#"></a></li>
+            </ul>
+        	<p class="copytext">&copy; 2016 Her Majesty the Queen in right of Canada (Canadian Food Inspection Agency), all rights reserved.</p>
+            <p class="designby">Website Designed &amp; Developed by <a href="#">2 Web Design</a></p>
+        </div>
+    </div>
+		<!-- end footer -->
+	</body>
+	</html> 
+	</xsl:template>
+	<!-- end main template -->
+</xsl:stylesheet>
+  

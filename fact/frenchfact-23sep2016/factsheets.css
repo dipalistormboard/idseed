@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+#image-bar{
+	padding:0;
+}
+.factsheet-right{
+	float:right;
+	width:980px;
+}
+.content #image-bar p{
+	line-height:16px;
+	font-size:10px;
+	color:#000;
+}
+.content .factsheet-right h1{
+	font-size:35px;
+	line-height:40px;
+	color:#007541;
+	font-weight:400;
+	text-transform:uppercase;
+	position:relative;
+	padding:0 0 6px;
+	margin:0 0 30px;
+	border:none;
+	font-style:normal;
+}
+.content .factsheet-right h1:after{
+	width:92px;
+	height:2px;
+	position:absolute;
+	left:0;
+	bottom:0;
+	display:block;
+	content:'';
+	background-color:#007541;
+}
+.content .factsheet-right h3{
+	margin:0 0 10px;
+	font-size:22px;
+	line-height:26px;
+}
+.content p strong{
+	color:#747474;
+}
+#related-species{
+	height:auto;
+	overflow:hidden;
+	padding:30px 20px 0;
+	margin:20px 0 0;
+}
+.content #related-species h2{
+	color:#007541;
+}
+.content #related-species p, .content #related-species p strong{
+	color:#414141;
+}
+.columnize{
+	height:auto !important;
+}

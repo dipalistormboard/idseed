@@ -1,0 +1,323 @@
+body {
+    margin: 0 auto;
+    padding: 0px;
+    width: 1090px;
+    position: relative;
+}
+
+
+a:link, a:visited, a:hover {
+    color: #d9a71c;
+    text-decoration: none;
+}
+
+a:hover {
+	color: #603913;
+}
+
+h1 {
+    color: #d9a71c;
+    font-size: 30px;
+    font-style: italic;
+    margin: 5px;
+}
+
+h2 {
+    color: #603913;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+img {
+	border: none;
+}
+
+td{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#header {
+    height: 180px;
+    width: 100%;
+    background-image: url(fs_images/header_background.png);
+    background-repeat: repeat-x;
+    position: relative;
+    z-index: 0;
+}
+
+#header .cfia-logo {
+    position: absolute;
+    left: 50px;
+    top: 8px;
+}
+
+#header .canada-logo {
+    position: absolute;
+    left: 570px;
+    top: 6px;
+}
+
+#header .language-selector {
+    position: absolute;
+    right: 35px;
+    top: 8px;
+}
+
+#header .language-selector ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#header .language-selector li {
+    float: left;
+    list-style-type: none;
+    padding-right: 28px;
+    font-weight: bold;
+}
+
+#header .search {
+	position: absolute;
+	left: 685px;
+	top: 8px;	
+}
+
+#search-text {
+	background: none;
+	border: none;
+	color: #555555;
+	font-weight: bold;
+}
+
+#header .title {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    color: #d9a71c;
+    font-size: 22px;
+	font-weight: bold;
+}
+
+#header .menu {
+    height: 75px;
+    width: 640px;
+    position: absolute;
+    left: 50px;
+    top: 92px;
+    background-color: #d9a71c;
+    font-size: 13px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 2px 2px 4px #585d3f;
+    -moz-box-shadow: 2px 2px 4px #585d3f;
+    -webkit-box-shadow: 2px 2px 4px #585d3f;
+	behavior: url(fs_images/PIE.htc);
+}
+
+#header .menu ul {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+}
+
+#header .menu li {
+    height: 75px;
+    float: left;
+    position: relative;
+    list-style-type: none;
+    background-image: url(fs_images/header_bullet.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 10px;
+    padding-top: 24px;
+    padding-right: 10px;
+    font-size: 120%;
+}
+
+#header .menu li:first-child {
+    background-image: none;
+}
+
+#header .menu a:link, #header .menu a:visited {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#header .menu a:hover {
+	color: #603913;
+}
+
+#image-bar {
+    position: absolute;
+    top: 120px;
+    left: 710px;
+    z-index: 10;
+    width: 321px;
+    padding-top: 0px;
+    margin-right: 60px;
+    margin-left: 20px;
+}
+
+#image-bar .rollover .image {
+    width: 321px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+	behavior: url(fs_images/PIE.htc);
+   /* background-color: #ffffff;
+    border: 1px solid black;*/
+    vertical-align: middle;
+    text-align: center;
+}
+
+#image-bar .rollover img {
+	position: relative;
+	z-index: 10;
+}
+
+#image-bar .thumbnails {
+    padding-top: 0.6em;
+    
+}
+
+#image-bar .thumbnail img {
+    /*border: 1px solid black;*/
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #b5b5b5; 
+}
+
+#image-bar .caption {
+    padding-top: 0.5em;
+    font-size: 77%;
+    height: 50px;
+}
+
+#image-bar .rollover .caption {
+	min-height: 45px;
+}
+
+#image-bar table {
+    width: 323px;
+}
+
+#image-bar td {
+    vertical-align: top;  
+}
+
+#image-bar .right-column {
+    padding-left: 20px;    
+}
+
+#content {
+    margin-left: 50px;
+    width: 660px;
+    position: relative;
+    color: #555555;
+}
+
+p strong {
+	color: #603913;
+}
+
+#footer {
+    clear: both;
+    background-color: #adb77b;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    position: relative;
+    font-size: 77%;
+}
+
+#footer .majesty {
+    position: absolute;
+    left: 52px;
+}
+
+#footer .rights {
+    position: absolute;
+    right: 60px;
+}
+
+
+/* alphabet list on the index and glossary pages */
+#alphabet {
+	clear: both;
+	height: 2.5em;
+	text-align: center;
+}
+
+#alphabet ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#alphabet li {
+	list-style-type: none;
+	float: left;
+	padding: 0.5em;
+	margin: 0px;
+}
+
+#alphabet li:first-child {
+    padding-left: 0px;
+}
+
+
+/* related species box */
+#related-species {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0px 10px 10px 10px;
+    background-color: #adb77b;
+}
+
+#related-species h2 {
+	color: #ffffff;
+	font-size: 24px;
+}
+
+#related-species p {
+	color: #ffffff;
+}
+
+#related-species ul {
+	color: #ffffff;
+}
+
+#related-species table {
+	color: #252525;
+	background-color: #ffffff;
+}
+
+#related-species caption {
+	color: #ffffff;
+	text-align: left;
+}
+
+#related-species .images {
+	float: left;
+	width: 150px;
+	margin-right: 30px;
+	margin-bottom: 25px;
+	padding-top: 10px;
+	clear: right;
+}
+
+#related-species .caption {
+	font-size: 9px;
+	padding-bottom: 5px;
+	color: #ffffff;
+}
+
+.column {
+    padding-right: 10px;
+}
